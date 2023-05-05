@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+      <script>
+      var c = 0;
+      var myTimer;
+      var stretchName;
+      var timerValue;
+
+      window.onload = function() {
+        var stretchValue = window.location.hash.substr(1);
+        var h3 = document.getElementsByTagName("h3")[0];
+        h3.textContent = stretchValue.replace(/%20/g, " ");
+
+        document.getElementById("startButton").addEventListener("click", startTimer);
+        document.getElementById("stopButton").addEventListener("click", stopTimer);
+      };
+
+      function myCounter() {
+        document.getElementById("stopwatch").innerHTML = ++c;
+      }
+
+      function startTimer() {
+        myTimer = setInterval(myCounter, 1000);
+      }
+
+      function stopTimer() {
+        clearInterval(myTimer);
+
+        stretchName = document.getElementsByTagName("h3")[0].innerHTML;
+        timerValue = document.getElementById("stopwatch").innerHTML;
+
+        localStorage.setItem("stretchName", stretchName);
+        localStorage.setItem("timerValue", timerValue);
+      }
+      
+      </script>
+  </head>
+    <style>
+        .box{
+            background-image: url(Images/home.png);
+            background-size: 950px 1520px;
+            background-repeat: no-repeat;
+            background-color: #F8DCB0;
+        }
+    
+    </style>
+  <body>
+    
+    <div class="box">
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    
+     <a href="stretch.html">
+        <div class="backbutton">
+          <img src = "Images/back-button.png" width="100px" height = "100px" style="margin-left: 20px; margin-top:20px"/>
+        </div> 
+      </a>
+    
+     <div>
+        <h2>Stretch Demonstration</h2>
+        <h3></h3>
+    <p>This is a demonstration of the <span id="stretchValue"></span> stretch.</p>
+     <button class="stretchbutton" id="startButton">Start Timer!</button>
+
+    <p id="stopwatch">Click on the button above and I will count forever.</p>
+
+    <button class="stretchbutton" id="stopButton" >Stop Timer!</button>
+    </div>
+         
+  <div class="navbar">
+  <div class="icon">
+    <a href="home.html"><img src="Images/homeicon.png"></a>
+    <span>Home</span>
+  </div>
+   <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon_clicked.png"></a>
+    <span>Stretch</span>
+  </div>
+  <div class="icon">
+    <a href="health.html"><img src="Images/healthliteracy.png"></a>
+    <span>Literacy</span>
+  </div>
+  <div class="icon">
+    <a href="mood.html"><img src="Images/diary.png"></a>
+    <span>Mood</span>
+  </div>
+  <div class="icon">
+    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <span>Nutrition</span>
+  </div>
+  <div class="icon">
+    <a href="progress.html"><img src="Images/progress.png"></a>
+    <span>Progress</span>
+  </div>
+</div>
+
+        
+    </div>
+  </body>
+</html>

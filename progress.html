@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+        // Get the stretch name and timer value from local storage
+        var stretchName = localStorage.getItem("stretchName");
+        var timerValue = localStorage.getItem("timerValue");
+        
+        // Convert timerValue to a number
+        timerValue = parseFloat(timerValue);
+
+        // Create a new chart using the stretch name and timer value
+        var chart = new Chart(document.getElementById("chart"), {
+          type: "bar",
+          data: {
+            labels: [stretchName],
+            datasets: [
+              {
+                label: "Timer Value",
+                data: [timerValue],
+                backgroundColor: "rgba(255, 99, 132, 0.2)",
+                borderColor: "rgba(255, 99, 132, 1)",
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                  beginAtZero: true,
+                  ticks: {
+                    fontSize: 40// set the font size to 16px
+                  }
+                },
+             x: {
+                  ticks: {
+                    fontSize: 40 // set the font size to 16px
+                  }
+                }
+            }
+        }
+        });
+        
+        });
+    </script>
+  </head>
+    <style>
+        .box{
+            background-image: url(Images/home.png);
+            background-size: 950px 1520px;
+            background-repeat: no-repeat;
+            background-color: #F8DCB0;
+        }
+     ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #F67B50;
+    }
+
+       li {
+      float: left;
+      border-right: 1px solid #F67B50;
+      font-size: 40px;
+      background-color: #F67B50; /* add background color */
+      padding: 0; /* remove default padding */
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #A82810;
+    }
+
+    .active {
+      background-color: #F67B50;
+    }
+    
+    </style>
+  <body>
+    <div class="box">
+     
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  
+        <h2>Track Your Progress</h2>
+        
+        <div class="progressbar" style="margin-top:20px;">
+            <h3>Totals</h3>
+        <div>
+         <ul>
+          <li><a class="active" href="#calories">Calories</a></li>
+          <li><a href="#water">Water Consumption</a></li>
+          <li><a href="#strectches">Stretches</a></li>
+        </ul>
+        </div>
+        <table class="summary">    
+            <tr>
+            <td>90</td> <td>90</td><td>90</td>
+            </tr>
+            <tr></tr>
+            <tr>
+            <td>Calories Intake(kCal)</td>
+            <td>Water Intake (cups)</td>
+            <td>Stretch Time (min)</td>
+            </tr>
+         </table>
+        </div>
+   
+        <canvas id="chart" width="800" height="600"></canvas>
+
+    
+         
+  <div class="navbar">
+  <div class="icon">
+    <a href="home.html"><img src="Images/homeicon.png"></a>
+    <span>Home</span>
+  </div>
+   <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon.png"></a>
+    <span>Stretch</span>
+  </div>
+  <div class="icon">
+    <a href="programs.html"><img src="Images/programs.png"></a>
+    <span>Programs</span>
+  </div>
+  <div class="icon">
+    <a href="mood.html"><img src="Images/diary.png"></a>
+    <span>Mood</span>
+  </div>
+  <div class="icon">
+    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <span>Nutrition</span>
+  </div>
+  <div class="icon">
+    <a href="progress.html"><img src="Images/progress_clicked.png"></a>
+    <span>Progress</span>
+  </div>
+</div>
+
+        
+    </div>
+  </body>
+</html>

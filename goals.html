@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+      <script>
+          function waterHelp(){
+              document.getElementById("waterhelp").innerHTML = "Recommended water daily water intake is 11 cups a day for women, which equates to 77 cups weekly. For men it is recommended to drink 13 cups of water which correspond to 91 cups weekly."
+          }
+      </script>
+  </head>
+    <style>
+        .box{
+            background-image: url(Images/home.png);
+            background-size: 950px 1520px;
+            background-repeat: no-repeat;
+            background-color: #ffe8d7;
+        }
+    
+    </style>
+  <body>
+    <div class="box">
+     
+    <br/><br/><br/><br/><br/><br/>
+          <a href="home.html">
+        <div class="backbutton">
+          <img src = "Images/back-button.png" width="100px" height = "100px" style="margin-left: 20px; margin-top:20px"/>
+        </div> 
+      </a>
+        <h2>Set Your Goals</h2>
+  
+        <form>
+        <label for="weight">Weight: <input type="text"/></label>
+        <br/>
+        <label for="height">Height: <input type="text"/></label>
+        
+        <h4>How many calories do you plan to intake weekly?</h4>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <br>
+        <h3>Water Intake</h3>
+        <h4>How much water do you plan to drink weekly?</h4>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <br> 
+        <span onClick="waterHelp()" STYLE = "font-size: 28px; font-style: italic;" id = "waterhelp">help</span>
+        <br> <br>
+       <h3>Caloric Intake</h3>
+        <h4>How many calories do you plan to intake weekly?</h4>
+        <div class="slidecontainer">
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        </div>
+        <br> 
+        <span onClick="waterHelp()" STYLE = "font-size: 28px; font-style: italic;" id = "waterhelp">help</span>
+        <br> <br>
+        <h3>Stretching Goals</h3>
+            <label class="container">Flexibility
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Balance
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Strength
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            </label>
+
+            <label class="container">Weight Loss
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            </label>
+        <h3>How many minutes a day do you plan to workout?</h3>
+            <a href="programs.html"><input type="submit"> </a>
+        </form>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+  <div class="navbar">
+  <div class="icon">
+    <a href="home.html"><img src="Images/home_clicked.png"></a>
+    <span>Home</span>
+  </div>
+  <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon.png"></a>
+    <span>Stretch</span>
+  </div>
+  <div class="icon">
+    <a href="health.html"><img src="Images/healthliteracy.png"></a>
+    <span>Literacy</span>
+  </div>
+  <div class="icon">
+    <a href="mood.html"><img src="Images/diary.png"></a>
+    <span>Mood</span>
+  </div>
+  <div class="icon">
+    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <span>Nutrition</span>
+  </div>
+  <div class="icon">
+    <a href="progress.html"><img src="Images/progress.png"></a>
+    <span>Progress</span>
+  </div>
+</div>
+
+        
+    </div>
+  </body>
+</html>

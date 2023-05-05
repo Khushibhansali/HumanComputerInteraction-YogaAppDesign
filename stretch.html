@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        
+    function filterTable(filter) {
+  // Get all table rows
+  var tableRows = document.querySelectorAll("#myTable td");
+  console.log(tableRows);
+  // Loop through all table rows
+  for (var i = 0; i < tableRows.length; i++) {
+    var row = tableRows[i];
+
+    // Check if row contains the filter class
+    var containsFilter = row.classList.contains(filter);
+       console.log(filter + " "+ row);
+    // Show row if filter is "all" or row contains the filter class, hide otherwise
+    if (filter === "all" || containsFilter) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  }
+}
+    function search() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+        
+ window.onload = function() {
+        var table = document.getElementById("myTable");
+        var rows = table.getElementsByTagName("tr");
+        for (var i = 0; i < rows.length; i++) {
+          var currentRow = rows[i];
+          var cells = currentRow.getElementsByTagName("td");
+          for (var j = 0; j < cells.length; j++) {
+            var currentCell = cells[j];
+            currentCell.addEventListener("click", function() {
+              var stretchValue = this.textContent;
+              window.location.href = "stretchdemonstration.html#" + stretchValue;
+            });
+          }
+        }
+      };
+</script>
+
+  </head>
+    <style>
+        .box{
+            background-image: url(Images/home.png);
+            background-size: 950px 1520px;
+            background-repeat: no-repeat;
+            background-color: #ffe8d7;
+        }
+        h2{
+            text-align: center;
+        
+        }
+    
+    </style>
+  <body>
+    <div class="box">
+     
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+     <div>
+         <a href="home.html">
+        <div class="backbutton">
+          <img src = "Images/back-button.png" width="100px" height = "100px" style="margin-left: 20px; margin-top:20px"/>
+        </div> 
+      </a>
+        <h2>Stretch</h2>
+         <input type="text" id="myInput" onkeyup="search()" placeholder="   Search for names.." pattern="^[a-zA-Z]*$" maxlength="50">
+
+        <table id="myTable">
+            <div class="buttontable">
+                <button class="stretchbutton" onclick="filterTable('beginner')">Beginner</button>
+                <button class="stretchbutton" onclick="filterTable('intermediate')">Intermediate</button>
+                <button class="stretchbutton" onclick="filterTable('advanced')">Advanced</button>
+                <button class="stretchbutton" onclick="filterTable('upperbody')">Upperbody</button>
+                <button class="stretchbutton" onclick="filterTable('lowerbody')">Lowerbody</button>
+                <button class="stretchbutton" onclick="filterTable('reset')">Reset</button>
+            </div>
+          <tr class="header">
+            <th style="width:60%;">Warm Up Poses</th>
+          </tr>
+          <tr>
+            <td class="upperbody beginner reset"><img src="Images/cat_cow_pose.png" width="60px" height="60px"/> Cat Cow Pose</td>
+          </tr>
+          <tr>
+            <td class="lowerbody upperbody beginner reset"><img src="Images/child's%20pose.png" width="60px" height="60px"/> Child's Pose</td>
+          </tr>
+          <tr>
+            <td class="upperbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Cobra Pose</td>
+          </tr>
+          <tr>
+            <td class="lowerbody upperbody beginner reset"><img src="Images/easy_pose.png" width="60px" height="60px"/>Easy Pose</td>
+          </tr>
+          <tr>
+            <td class="lowerbody beginner reset"><img src="Images/revolved_low_unge.png" width="60px" height="60px"/>Easy Revolved Low Lunge Pose</td>
+          </tr>
+          <tr>
+            <td class="lowerbody upperbody beginner reset"><img src="Images/baby_pose.png" width="60px" height="60px"/>Happy Baby Pose</td>
+          </tr>
+          <tr class="header">
+            <th style="width:60%;">Beginner Pose</th>
+          </tr>
+         <tr>
+            <td class="upperbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Banana Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Belly Pose</td>
+          </tr>
+            <tr>
+            <td class="lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Bound Butterfly Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Bridge Pose</td>
+          </tr>
+            <tr>
+            <td class="lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Cresent Lunge Pose</td>
+          </tr>
+            <tr class="header">
+            <th style="width:60%;">Intermediate Poses</th>
+          </tr>
+         <tr>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Boat Pose</td>
+          </tr>
+            <tr>
+            <td class=" upperbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Camel Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Twist Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Dancer Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Forearm Plank Pose</td>
+          </tr>
+            <tr class="header">
+            <th style="width:60%;">Advanced Poses</th>
+          </tr>
+
+            <tr>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Extended Hand To Big Toe</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> One legged Brigde Pose</td>
+          </tr>
+            <tr>
+            <td class="lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Pistol Squat Pse</td>
+          </tr>
+            <tr>
+            <td class="upperbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Side Plank Pose</td>
+          </tr>
+            <tr>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Shoulderstand Pose</td>
+          </tr>
+          <tr>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Standing Split Pose</td>
+          </tr>
+            
+        </table>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+         
+    </div>
+    
+  <div class="navbar">
+  <div class="icon">
+    <a href="home.html"><img src="Images/homeicon.png"></a>
+    <span>Home</span>
+  </div>
+   <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon_clicked.png"></a>
+    <span>Stretch</span>
+  </div>
+ <div class="icon">
+    <a href="programs.html"><img src="Images/programs.png"></a>
+    <span>Programs</span>
+  </div>
+  <div class="icon">
+    <a href="mood.html"><img src="Images/diary.png"></a>
+    <span>Mood</span>
+  </div>
+  <div class="icon">
+    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <span>Nutrition</span>
+  </div>
+  <div class="icon">
+    <a href="progress.html"><img src="Images/progress.png"></a>
+    <span>Progress</span>
+  </div>
+</div>
+
+        
+    </div>
+  </body>
+</html>

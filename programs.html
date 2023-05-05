@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+      <script>
+      let toggle = button => {
+        let element = document.getElementById("physicalHealth");
+        let hidden = element.getAttribute("hidden");
+        document.getElementById("mental").setAttribute("hidden", "hidden");
+        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
+        document.getElementById("healthcare").setAttribute("hidden", "hidden");
+
+        if (hidden) {
+           element.removeAttribute("hidden");
+        } else {
+           element.setAttribute("hidden", "hidden");
+        }
+     }
+     
+    let toggleMental = button => {
+        let element = document.getElementById("mental");
+        let hidden = element.getAttribute("hidden");
+        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
+        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
+        document.getElementById("healthcare").setAttribute("hidden", "hidden");
+
+        if (hidden) {
+           element.removeAttribute("hidden");
+        } else {
+           element.setAttribute("hidden", "hidden");
+        }
+     }
+    
+      let toggleLife = button => {
+        let element = document.getElementById("lifestyle");
+        let hidden = element.getAttribute("hidden");
+        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
+        document.getElementById("mental").setAttribute("hidden", "hidden");
+        document.getElementById("healthcare").setAttribute("hidden", "hidden");
+
+        if (hidden) {
+           element.removeAttribute("hidden");
+        } else {
+           element.setAttribute("hidden", "hidden");
+        }
+     }
+      
+      let toggleHealth = button => {
+        let element = document.getElementById("healthcare");
+        let hidden = element.getAttribute("hidden");
+        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
+        document.getElementById("mental").setAttribute("hidden", "hidden");
+        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
+
+        if (hidden) {
+           element.removeAttribute("hidden");
+        } else {
+           element.setAttribute("hidden", "hidden");
+        }
+     }
+      
+      
+      </script>
+  </head>
+    <style>
+        .box{
+            background-image: url(Images/home.png);
+            background-size: 950px 1520px;
+            background-repeat: no-repeat;
+            background-color: #F8DCB0;
+        }
+    
+        
+    </style>
+  <body>
+    <div class="box">
+          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+    <h2>Programs</h2>
+    
+         
+  <div class="navbar">
+  <div class="icon">
+    <a href="home.html"><img src="Images/homeicon.png"></a>
+    <span>Home</span>
+  </div>
+  <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon.png"></a>
+    <span>Stretch</span>
+  </div>
+  <div class="icon">
+    <a href="programs.html"><img src="Images/programs.png"></a>
+    <span>Programs</span>
+  </div>
+  <div class="icon">
+    <a href="mood.html"><img src="Images/diary.png"></a>
+    <span>Mood</span>
+  </div>
+  <div class="icon">
+    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <span>Nutrition</span>
+  </div>
+  <div class="icon">
+    <a href="progress.html"><img src="Images/progress.png"></a>
+    <span>Progress</span>
+  </div>
+</div> 
+
+    </div>
+  </body>
+</html>
