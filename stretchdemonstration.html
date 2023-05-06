@@ -2,6 +2,8 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+      <script defer src = "app.js"></script>
+      <script type="module" src="https://unpkg.com.ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script>
       var c = 0;
       var myTimer;
@@ -12,6 +14,15 @@
         var stretchValue = window.location.hash.substr(1);
         var h3 = document.getElementsByTagName("h3")[0];
         h3.textContent = stretchValue.replace(/%20/g, " ");
+          
+        var stretchInstruction = localStorage.getItem('stretchInstruction');
+        var stretchInstructionEl = document.getElementByClass('stretchInstruction');
+        stretchInstructionEl.textContent = stretchInstruction;
+    
+
+    var stretchInstruction = localStorage.getItem('stretchInstruction');
+    var stretchInstructionEl = document.getElementById('stretchInstruction');
+    stretchInstructionEl.textContent = stretchInstruction;
 
         document.getElementById("startButton").addEventListener("click", startTimer);
         document.getElementById("stopButton").addEventListener("click", stopTimer);
@@ -27,14 +38,15 @@
 
       function stopTimer() {
         clearInterval(myTimer);
+      }
 
         stretchName = document.getElementsByTagName("h3")[0].innerHTML;
         timerValue = document.getElementById("stopwatch").innerHTML;
 
         localStorage.setItem("stretchName", stretchName);
         localStorage.setItem("timerValue", timerValue);
-      }
       
+    
       </script>
   </head>
     <style>
@@ -44,7 +56,12 @@
             background-repeat: no-repeat;
             background-color: #F8DCB0;
         }
-    
+        button: active{
+            transform: scale(0.9);
+        }
+        button: hover{
+            color: goldenrod;
+        }
     </style>
   <body>
     
@@ -60,7 +77,23 @@
      <div>
         <h2>Stretch Demonstration</h2>
         <h3></h3>
-    <p>This is a demonstration of the <span id="stretchValue"></span> stretch.</p>
+     <p>Instructions: <span id="stretchInstruction"></span></p>
+         
+
+    <div classs ="stopwatch">
+         <h1> Stopwatch <span class="gold"> JS</span></h1>
+        <div class="circle">
+            <span class="time" id="display">
+            00:00:00
+            </span>
+        </div>
+    </div>
+    <div class="controls">
+         <button class="stopwatchbuttons play"></button>
+         <button class="stopwatchbuttons pause"></button>
+         <button class="stopwatchbuttons reset-button"></button>
+    </div>
+         
      <button class="stretchbutton" id="startButton">Start Timer!</button>
 
     <p id="stopwatch">Click on the button above and I will count forever.</p>
@@ -78,7 +111,7 @@
     <span>Stretch</span>
   </div>
   <div class="icon">
-    <a href="health.html"><img src="Images/healthliteracy.png"></a>
+    <a href="programs.html"><img src="Images/programs.png"></a>
     <span>Literacy</span>
   </div>
   <div class="icon">

@@ -55,6 +55,9 @@ h3{
     margin-bottom: 0px;
 }
 
+p{
+    padding: 20px;
+}
 
 #myInput {
   background-image: url('Images/search.png'); /* Add a search icon to input */
@@ -184,5 +187,105 @@ h3{
 .summary {
     font-size:30px;
     padding: 10px;
+    text-align: center;
+}
+
+.stopwatch{
+    display:grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px;
+    margin-top: 13rem;
+}
+
+.gold{
+    font-weight: 900;
+    color: goldenrod;
+    text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c;
+}
+
+.time{
+    font-size:40px;
+}
+
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 270px;
+    height:270px;
+    border: 2px solid black;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    width: 178px;
+}
+
+.stopwatchbuttons{
+    background: transparent;
+    padding: 0;
+    border: none;
+    margin: 0;
+    font-size: 50px;
+    color: #fff
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.play {
+  background-image: url('Images/play.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: block;
+}
+
+.pause {
+  background-image: url('Images/pause.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display:nonel
+}
+
+.reset-button {
+  background-image: url('Images/reset.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  
+  margin: 30px;
+}
+.grid-item {
+  background-color: #F67B50;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.grid-item:hover {
+  background-color: #fff;
+  color: #F67B50;
+}
+
+.programPaths{
+    margin:20px;
     text-align: center;
 }

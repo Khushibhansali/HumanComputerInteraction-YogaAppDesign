@@ -2,65 +2,6 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
-      <script>
-      let toggle = button => {
-        let element = document.getElementById("physicalHealth");
-        let hidden = element.getAttribute("hidden");
-        document.getElementById("mental").setAttribute("hidden", "hidden");
-        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
-        document.getElementById("healthcare").setAttribute("hidden", "hidden");
-
-        if (hidden) {
-           element.removeAttribute("hidden");
-        } else {
-           element.setAttribute("hidden", "hidden");
-        }
-     }
-     
-    let toggleMental = button => {
-        let element = document.getElementById("mental");
-        let hidden = element.getAttribute("hidden");
-        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
-        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
-        document.getElementById("healthcare").setAttribute("hidden", "hidden");
-
-        if (hidden) {
-           element.removeAttribute("hidden");
-        } else {
-           element.setAttribute("hidden", "hidden");
-        }
-     }
-    
-      let toggleLife = button => {
-        let element = document.getElementById("lifestyle");
-        let hidden = element.getAttribute("hidden");
-        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
-        document.getElementById("mental").setAttribute("hidden", "hidden");
-        document.getElementById("healthcare").setAttribute("hidden", "hidden");
-
-        if (hidden) {
-           element.removeAttribute("hidden");
-        } else {
-           element.setAttribute("hidden", "hidden");
-        }
-     }
-      
-      let toggleHealth = button => {
-        let element = document.getElementById("healthcare");
-        let hidden = element.getAttribute("hidden");
-        document.getElementById("physicalHealth").setAttribute("hidden", "hidden");
-        document.getElementById("mental").setAttribute("hidden", "hidden");
-        document.getElementById("lifestyle").setAttribute("hidden", "hidden");
-
-        if (hidden) {
-           element.removeAttribute("hidden");
-        } else {
-           element.setAttribute("hidden", "hidden");
-        }
-     }
-      
-      
-      </script>
   </head>
     <style>
         .box{
@@ -69,15 +10,65 @@
             background-repeat: no-repeat;
             background-color: #F8DCB0;
         }
-    
+        
+        a{
+            text-decoration: none;
+            color:black;
+            font-size: 40px;  
+        }
+        span{
+        font-size: 40px; 
+        }
         
     </style>
   <body>
     <div class="box">
-          <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
+          <br/><br/><br/><br/><br/><br/>
     <h2>Programs</h2>
+        <p> Using your goals, we've curated these programs for you. Get started on your physical wellness and mental wellness journey.</p>
+        
+    <h3> Based on Your Goals </h3>
+        
+    <div class="grid-container">
+    <a href="recovery.html">
+      <div class="grid-item"><img src="Images/recovery.png"><br/>
+    <span>Recovery</span></div>
+        </a>
     
+    <a href="flexibility.html">
+      <div class="grid-item"><img src="Images/flexibiliy.png"><br/>
+    <span>Flexibility</span></div>
+    </a>
+    <a href="stretch.html">
+        <div class="grid-item"><img src="Images/strength.png"><br/>
+        <span>Strength</span></div> 
+    </a>
+    <a href="stretch.html">
+      <div class="grid-item"><img src="Images/balance.png"><br/>
+    <span>Balance</span></div>
+    </a>
+    <a href="stretch.html">
+      <div class="grid-item"><img src="Images/stress_relief.png"><br/>
+        <span>Relaxation</span></div>
+    </a>
+    <a href="stretch.html">
+    <div class="grid-item"><img src="Images/all.png"><br/>
+    <span>All</span></div>
+    </a>  
+    </div>
+    
+    <div class="programPaths">
+    <h2>Beginner Path </h2>
+    <a href="stretch.html"><img src="Images/beginner.jpeg" width="500px" height="300px"></a>
+   
+    <h2>Intermediate Path </h2>
+    <a href="stretch.html"><img src="Images/intermediate.png" width="500px" height="300px"></a>
+        
+    <h2>Advanced Path </h2>
+    <a href="stretch.html"><img src="Images/advanced.png" width="500px" height="300px"></a>
+    </div>
+        
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
          
   <div class="navbar">
   <div class="icon">
@@ -89,7 +80,7 @@
     <span>Stretch</span>
   </div>
   <div class="icon">
-    <a href="programs.html"><img src="Images/programs.png"></a>
+    <a href="programs.html"><img src="Images/programs_clicked.png"></a>
     <span>Programs</span>
   </div>
   <div class="icon">

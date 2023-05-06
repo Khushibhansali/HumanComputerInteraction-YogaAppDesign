@@ -48,18 +48,25 @@
  window.onload = function() {
         var table = document.getElementById("myTable");
         var rows = table.getElementsByTagName("tr");
+    
         for (var i = 0; i < rows.length; i++) {
           var currentRow = rows[i];
           var cells = currentRow.getElementsByTagName("td");
           for (var j = 0; j < cells.length; j++) {
             var currentCell = cells[j];
+            var stretchInstruction = cells[j].querySelector('img').getAttribute('alt');
+
             currentCell.addEventListener("click", function() {
-              var stretchValue = this.textContent;
-              window.location.href = "stretchdemonstration.html#" + stretchValue;
+                var stretchValue = this.textContent;
+                var stretchInstruction = this.querySelector('img').getAttribute('alt');
+                localStorage.setItem('stretchInstruction', stretchInstruction);
+
+                window.location.href = "stretchdemonstration.html#" + stretchValue;
             });
           }
         }
       };
+
 </script>
 
   </head>
@@ -102,7 +109,7 @@
             <th style="width:60%;">Warm Up Poses</th>
           </tr>
           <tr>
-            <td class="upperbody beginner reset"><img src="Images/cat_cow_pose.png" width="60px" height="60px"/> Cat Cow Pose</td>
+            <td class="upperbody beginner reset"><img src="Images/cat_cow_pose.png" width="60px" height="60px" alt ="1. Keep your hands shoulder-width apart and your knees directly below your hips. \n2.Inhale deeply while curving your lower back and bringing your head up, tilting your pelvis up like a cow. \n3. Exhale deeply and bring your abdomen in, arching your spine and bringing your head and pelvis down like a cat." class="stretchInstruction"/> Cat Cow Pose</td>
           </tr>
           <tr>
             <td class="lowerbody upperbody beginner reset"><img src="Images/child's%20pose.png" width="60px" height="60px"/> Child's Pose</td>
@@ -123,65 +130,65 @@
             <th style="width:60%;">Beginner Pose</th>
           </tr>
          <tr>
-            <td class="upperbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Banana Pose</td>
+            <td class="upperbody beginner reset"><img src="Images/banana.png" width="60px" height="60px"/> Banana Pose</td>
           </tr>
             <tr>
-            <td class="upperbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Belly Pose</td>
+            <td class="upperbody beginner reset"><img src="Images/belly.png" width="60px" height="60px"/> Belly Pose</td>
           </tr>
             <tr>
-            <td class="lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Bound Butterfly Pose</td>
+            <td class="lowerbody beginner reset"><img src="Images/butterfly.png" width="60px" height="60px"/> Bound Butterfly Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Bridge Pose</td>
+            <td class="upperbody lowerbody beginner reset"><img src="Images/bridge.png" width="60px" height="60px"/> Bridge Pose</td>
           </tr>
             <tr>
-            <td class="lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Pose</td>
+            <td class="lowerbody beginner reset"><img src="Images/chair_pose.png" width="60px" height="60px"/> Chair Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody beginner reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Cresent Lunge Pose</td>
+            <td class="upperbody lowerbody beginner reset"><img src="Images/c_lunge.png" width="60px" height="60px"/> Cresent Lunge Pose</td>
           </tr>
             <tr class="header">
             <th style="width:60%;">Intermediate Poses</th>
           </tr>
          <tr>
-            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Boat Pose</td>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/boat.png" width="60px" height="60px"/> Boat Pose</td>
           </tr>
             <tr>
             <td class=" upperbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Camel Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Pose</td>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/chair_pose.png" width="60px" height="60px"/> Chair Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Chair Twist Pose</td>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/chair_pose.png" width="60px" height="60px"/> Chair Twist Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Dancer Pose</td>
+            <td class="upperbody lowerbody intermediate reset"><img src="Images/dancer.png" width="60px" height="60px"/> Dancer Pose</td>
           </tr>
             <tr>
-            <td class="upperbody intermediate reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Forearm Plank Pose</td>
+            <td class="upperbody intermediate reset"><img src="Images/plank.png" width="60px" height="60px"/> Forearm Plank Pose</td>
           </tr>
             <tr class="header">
             <th style="width:60%;">Advanced Poses</th>
           </tr>
 
             <tr>
-            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Extended Hand To Big Toe</td>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/toe.png" width="60px" height="60px"/> Extended Hand To Big Toe</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> One legged Brigde Pose</td>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/bridge.png" width="60px" height="60px"/> One legged Brigde Pose</td>
           </tr>
             <tr>
-            <td class="lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Pistol Squat Pse</td>
+            <td class="lowerbody advanced reset"><img src="Images/squat.png" width="60px" height="60px"/> Pistol Squat Pose</td>
           </tr>
             <tr>
-            <td class="upperbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Side Plank Pose</td>
+            <td class="upperbody advanced reset"><img src="Images/sideplank.png" width="60px" height="60px"/> Side Plank Pose</td>
           </tr>
             <tr>
-            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Shoulderstand Pose</td>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/shoulderstand.png" width="60px" height="60px"/> Shoulderstand Pose</td>
           </tr>
           <tr>
-            <td class="upperbody lowerbody advanced reset"><img src="Images/cobra_pose.png" width="60px" height="60px"/> Standing Split Pose</td>
+            <td class="upperbody lowerbody advanced reset"><img src="Images/shoulderstand.png" width="60px" height="60px"/> Standing Split Pose</td>
           </tr>
             
         </table>
