@@ -1,6 +1,9 @@
 body{
-background-color: #ffe8d7; 
+    background-color: #ffe8d7; 
+    font-family: 'Poppins', sans-serif;
+    
 }
+
 .box{
     align-self: center;
     width: 956px;
@@ -18,11 +21,12 @@ background-color: #ffe8d7;
   overflow: auto;
   list-style-type: none;
   overflow: hidden;
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: none;
   display: flex;
   justify-content: space-between;
   align-items: center; 
+ 
 }
 
 .icon {
@@ -30,14 +34,15 @@ background-color: #ffe8d7;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    
+  padding:5px;
+  margin: 5px;
 }
 .icon span {
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .stretchlibrary{
-    padding-left: 120px;
+    padding-left: 140px;
 }
 h2{
     color:black;
@@ -57,7 +62,9 @@ h3{
 
 p{
     padding: 20px;
+    font-size:30px;
 }
+
 
 #myInput {
   background-image: url('Images/search.png'); /* Add a search icon to input */
@@ -65,21 +72,23 @@ p{
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 100%; /* Full-width */
   font-size: 40px; /* Increase font-size */
-  padding: 20px 20px 20px 40px; /* Add some padding */
+  padding: 20px 20px 20px 60px; /* Add some padding */
   border: 1px solid #FBAA60; /* Add a orange border */
   margin-bottom: 12px; /* Add some space below the input */
+
 }
 
 #myTable {
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
   border: 1px solid #ddd; /* Add a grey border */
-  font-size: 40px; /* Increase font-size */
+  font-size: 50px; /* Increase font-size */
 }
 
 #myTable th, #myTable td {
   text-align: left; /* Left-align text */
   padding: 12px; /* Add padding */
+    
 }
 
 #myTable tr {
@@ -93,7 +102,7 @@ p{
 }
 
 .stretchbutton{
-    font-size:30px;
+    font-size:50px;
     padding:10px;
     margin: 5px;
     border-radius: 25px;
@@ -102,6 +111,7 @@ p{
 .buttontable{
     padding-left:15px;
     margin-bottom:10px;
+
 }
 
 

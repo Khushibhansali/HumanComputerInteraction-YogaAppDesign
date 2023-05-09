@@ -2,6 +2,9 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <script>
         
     function filterTable(filter) {
@@ -79,21 +82,23 @@
         }
         h2{
             text-align: center;
-        
+            font-family: 'Poppins', sans-serif;
         }
+        
+        
     
     </style>
   <body>
     <div class="box">
      
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
      <div>
-         <a href="home.html">
-        <div class="backbutton">
-          <img src = "Images/back-button.png" width="100px" height = "100px" style="margin-left: 20px; margin-top:20px"/>
-        </div> 
-      </a>
-        <h2>Stretch</h2>
+           <div style="display: flex; align-items: center;">
+        <a href="home.html" style="display: flex; align-items: center; text-decoration: none;">
+            <img src="Images/back-button.png" width="100px" height="100px" style="margin-right: 20px;"/>
+            <h2 style= "padding:0px; margin-left: 220px;">STRETCH</h2>
+        </a>
+    </div>
          <input type="text" id="myInput" onkeyup="search()" placeholder="   Search for names.." pattern="^[a-zA-Z]*$" maxlength="50">
 
         <table id="myTable">
@@ -196,33 +201,32 @@
          
     </div>
     
-  <div class="navbar">
+    <div class="navbar">
   <div class="icon">
-    <a href="home.html"><img src="Images/homeicon.png"></a>
+    <a href="home.html"><img src="Images/homeicon.png" width="70px" height = "70px"></a>
     <span>Home</span>
   </div>
-   <div class="icon">
-    <a href="stretch.html"><img src="Images/stretch_icon_clicked.png"></a>
+  <div class="icon">
+    <a href="stretch.html"><img src="Images/stretch_icon_clicked.png" width="70px" height = "70px"></a>
     <span>Stretch</span>
   </div>
- <div class="icon">
-    <a href="programs.html"><img src="Images/programs.png"></a>
+  <div class="icon">
+    <a href="programs.html"><img src="Images/programs.png" width="70px" height = "70px"></a>
     <span>Programs</span>
   </div>
   <div class="icon">
-    <a href="mood.html"><img src="Images/diary.png"></a>
+    <a href="mood.html"><img src="Images/diary.png" width="70px" height = "70px"></a>
     <span>Mood</span>
   </div>
   <div class="icon">
-    <a href="nutrition.html"><img src="Images/nutrient.png"></a>
+    <a href="nutrition.html"><img src="Images/nutrient.png" width="70px" height = "70px"></a>
     <span>Nutrition</span>
   </div>
   <div class="icon">
-    <a href="progress.html"><img src="Images/progress.png"></a>
+    <a href="progress.html"><img src="Images/progress.png" width="70px" height = "70px"></a>
     <span>Progress</span>
   </div>
 </div>
-
         
     </div>
   </body>
