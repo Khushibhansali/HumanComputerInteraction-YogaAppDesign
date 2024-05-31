@@ -1,4 +1,4 @@
-# CMSC434Phase4
+# Yoga App Design
 GOAL: FINISH CODING BY TUES MAY 9
 
 Step 1: 
